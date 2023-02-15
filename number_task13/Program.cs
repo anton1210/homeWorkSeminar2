@@ -5,9 +5,11 @@
 Console.Clear();
 Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
-if (num >= 100)
+while (num >= 1000)
 {
-    Console.WriteLine(num % 10);
+    num = num / 10;
 }
-else
-    Console.WriteLine("третьей цифры нет");
+if (num >= 100 && num < 1000)
+    Console.WriteLine(num % 10);
+else if (num < 100) 
+Console.WriteLine("третьей цифры нет");
